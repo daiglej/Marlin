@@ -74,7 +74,7 @@
 // User-specified version info of this build to display in [Pronterface, etc] terminal window during
 // startup. Implementation of an idea by Prof Braino to inform user that any changes made to this
 // build by the user have been successfully uploaded into firmware.
-#define STRING_CONFIG_H_AUTHOR "Jonathan Daigle" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "Jonathan Daigle 2018-02-24" // Who made the changes.
 #define SHOW_BOOTSCREEN
 #define STRING_SPLASH_LINE1 "Hou! Johny your the best" // will be shown during bootup in line 1
 #define STRING_SPLASH_LINE2 "Yeah BABY!!"         // will be shown during bootup in line 2
@@ -537,7 +537,7 @@
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 500, 400, 2, 25 }
+#define DEFAULT_MAX_FEEDRATE          { 500, 400, 200, 25 }
 
 /**
  * Default Max Acceleration (change/s) change = mm/s
@@ -692,15 +692,15 @@
 #define XY_PROBE_SPEED 8000
 
 // Speed for the first approach when double-probing (with PROBE_DOUBLE_TOUCH)
-#define Z_PROBE_SPEED_FAST 1
+#define Z_PROBE_SPEED_FAST 150
 
 // Speed for the "accurate" probe of each point
-#define Z_PROBE_SPEED_SLOW (Z_PROBE_SPEED_FAST / 2)
+#define Z_PROBE_SPEED_SLOW 25
 
 // The number of probes to perform at each point.
 //   Set to 2 for a fast/slow probe, using the second probe result.
 //   Set to 3 or more for slow probes, averaging the results.
-//#define MULTIPLE_PROBING 2
+#define MULTIPLE_PROBING 2
 
 /**
  * Z probes require clearance when deploying, stowing, and moving between
@@ -1041,7 +1041,7 @@
 
 // Homing speeds (mm/m)
 #define HOMING_FEEDRATE_XY (50*60)
-#define HOMING_FEEDRATE_Z  (4*60)
+#define HOMING_FEEDRATE_Z  150
 
 // @section calibrate
 
