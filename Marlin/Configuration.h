@@ -371,10 +371,10 @@
 
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
-  // My own result of "M303 S230 C10 E0 U" 
-  #define  DEFAULT_Kp 43.44
-  #define  DEFAULT_Ki 8.42
-  #define  DEFAULT_Kd 56.05
+  // My own result of "M303 S230 C50 E0 U" 
+  #define  DEFAULT_Kp 18.40
+  #define  DEFAULT_Ki 1.66
+  #define  DEFAULT_Kd 50.86
 
   // Ultimaker
   //#define DEFAULT_Kp 22.2
