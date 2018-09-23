@@ -76,8 +76,8 @@
 // build by the user have been successfully uploaded into firmware.
 #define STRING_CONFIG_H_AUTHOR "Jonathan Daigle 2018-02-24" // Who made the changes.
 #define SHOW_BOOTSCREEN
-#define STRING_SPLASH_LINE1 "Hou! Johny your the best" // will be shown during bootup in line 1
-#define STRING_SPLASH_LINE2 "Yeah BABY!!"         // will be shown during bootup in line 2
+#define STRING_SPLASH_LINE1 "It always seems impossible" // will be shown during bootup in line 1
+#define STRING_SPLASH_LINE2 "until it's done"         // will be shown during bootup in line 2
 
 /**
  * *** VENDORS PLEASE READ ***
