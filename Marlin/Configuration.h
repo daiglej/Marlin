@@ -782,10 +782,10 @@
  */
 #define X_PROBE_OFFSET_FROM_EXTRUDER 42    // X offset: -left  +right  [of the nozzle]
 #define Y_PROBE_OFFSET_FROM_EXTRUDER 30    // Y offset: -front +behind [the nozzle]
-#define Z_PROBE_OFFSET_FROM_EXTRUDER -1.90 // Z offset: -below +above  [the nozzle]
+#define Z_PROBE_OFFSET_FROM_EXTRUDER -1.20 // Z offset: -below +above  [the nozzle]
 
 // Certain types of probes need to stay away from edges
-#define MIN_PROBE_EDGE 10
+#define MIN_PROBE_EDGE 1
 
 // X and Y axis travel speed (mm/m) between probes
 #define XY_PROBE_SPEED 5000
@@ -882,7 +882,7 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 240
+#define X_BED_SIZE 252
 #define Y_BED_SIZE 255
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
@@ -891,7 +891,7 @@
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
-#define Z_MAX_POS 356
+#define Z_MAX_POS 360
 
 /**
  * Software Endstops
@@ -1023,14 +1023,14 @@
 #if ENABLED(AUTO_BED_LEVELING_LINEAR) || ENABLED(AUTO_BED_LEVELING_BILINEAR)
 
   // Set the number of grid points per dimension.
-  #define GRID_MAX_POINTS_X 8
-  #define GRID_MAX_POINTS_Y 9
+  #define GRID_MAX_POINTS_X 14
+  #define GRID_MAX_POINTS_Y 15
 
   // Set the boundaries for probing (where the probe can reach).
-  #define LEFT_PROBE_BED_POSITION 43
-  #define RIGHT_PROBE_BED_POSITION 230
-  #define FRONT_PROBE_BED_POSITION 31
-  #define BACK_PROBE_BED_POSITION 240
+  #define LEFT_PROBE_BED_POSITION 42
+  #define RIGHT_PROBE_BED_POSITION 251
+  #define FRONT_PROBE_BED_POSITION 30
+  #define BACK_PROBE_BED_POSITION 253
 
   // Probe along the Y axis, advancing X after each column
   //#define PROBE_Y_FIRST
@@ -1045,7 +1045,7 @@
     // Experimental Subdivision of the grid by Catmull-Rom method.
     // Synthesizes intermediate points to produce a more detailed mesh.
     //
-    #define ABL_BILINEAR_SUBDIVISION
+    //#define ABL_BILINEAR_SUBDIVISION
     #if ENABLED(ABL_BILINEAR_SUBDIVISION)
       // Number of subdivisions between probe points
       #define BILINEAR_SUBDIVISIONS 2
@@ -1185,6 +1185,7 @@
  *    +-------------->X     +-------------->X     +-------------->Y
  *     XY_SKEW_FACTOR        XZ_SKEW_FACTOR        YZ_SKEW_FACTOR
  */
+ //TODO
 //#define SKEW_CORRECTION
 
 #if ENABLED(SKEW_CORRECTION)
@@ -1259,11 +1260,11 @@
 
 // Preheat Constants
 #define PREHEAT_1_TEMP_HOTEND 200
-#define PREHEAT_1_TEMP_BED     50
+#define PREHEAT_1_TEMP_BED     55
 #define PREHEAT_1_FAN_SPEED     0 // Value from 0 to 255
 
 #define PREHEAT_2_TEMP_HOTEND 260
-#define PREHEAT_2_TEMP_BED    110
+#define PREHEAT_2_TEMP_BED    120
 #define PREHEAT_2_FAN_SPEED     0 // Value from 0 to 255
 
 /**
